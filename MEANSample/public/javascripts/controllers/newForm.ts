@@ -30,4 +30,4 @@ module MEANSample.controllerts {
 }
 
 angular.module("app.controller", []).controller("controller", MEANSample.controllerts.newForm);
-angular.module("app", ["app.controller"]);
+angular.module("app", ["app.controller", 'ngResource']);

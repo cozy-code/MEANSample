@@ -39,6 +39,7 @@
     <TypeScriptCompile Include="public\javascripts\models\Person.ts" />
     <TypeScriptCompile Include="public\javascripts\controllers\newForm.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
+    <TypeScriptCompile Include="routes\person.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />

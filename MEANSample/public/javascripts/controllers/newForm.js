@@ -27,5 +27,5 @@ var MEANSample;
     })(controllerts = MEANSample.controllerts || (MEANSample.controllerts = {}));
 })(MEANSample || (MEANSample = {}));
 angular.module("app.controller", []).controller("controller", MEANSample.controllerts.newForm);
-angular.module("app", ["app.controller"]);
+angular.module("app", ["app.controller", 'ngResource']);
 //# sourceMappingURL=newForm.js.map

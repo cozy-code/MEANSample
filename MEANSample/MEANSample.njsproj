@@ -36,6 +36,8 @@
     <Content Include="Scripts\tsd.json" />
     <Content Include="views\newForm.jade" />
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="public\javascripts\models\Person.ts" />
+    <TypeScriptCompile Include="public\javascripts\controllers\newForm.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
@@ -51,9 +53,12 @@
     <TypeScriptCompile Include="Scripts\typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="models\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
+    <Folder Include="public\javascripts\models\" />
+    <Folder Include="public\javascripts\controllers\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="Scripts\" />

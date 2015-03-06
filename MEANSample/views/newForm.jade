@@ -1,20 +1,23 @@
 ﻿extends layout
 
 block content
-    div(ng-app)
+    div(ng-app="app")
         h1= title
-        form
+        form(ng-controller="controller")
+            |{{test}}
             p
                 label Name
-                input(type="text")
+                input(type="text",ng-model="person.name")
             p
                 label Age
-                input(type="text")
+                input(type="text",ng-model="person.age")
             p
                 label Comment
-                textarea
+                textarea(ng-model="person.comment")
             p
-                input(type="button",value="submit")
+                input(type="button",value="submit",ng-click="submit()")
                     
 block script
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
+    script(src="javascripts/models/Person.js")
+    script(src="javascripts/controllers/newForm.js")

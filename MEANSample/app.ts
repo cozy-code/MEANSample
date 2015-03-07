@@ -32,7 +32,7 @@ app.get('/newForm', routes.newForm);
 app.get('/users', user.list);
 
 // Web API
-app.post("/person", person.save);
+app.post("/person", person.save);    //引数なしPOSTは新規作成
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

@@ -6,8 +6,9 @@ var MEANSample;
     (function (controllerts) {
         //コントローラ本体
         var newForm = (function () {
-            function newForm($scope) {
+            function newForm($scope, $resource) {
                 this.$scope = $scope;
+                this.$resource = $resource;
                 $scope.person = new MEANSample.models.Person();
                 // for debug
                 $scope.person.name = "おなまえ";
@@ -18,14 +19,18 @@ var MEANSample;
             }
             //イベントハンドラ
             newForm.prototype.submit = function () {
-                // for debug
-                this.$scope.person.age++;
+                var self = this;
+                var personApi = this.$resource("/person");
+                personApi.save(this.$scope.person, function () {
+                    // for debug
+                    self.$scope.person.age++;
+                });
             };
             return newForm;
         })();
         controllerts.newForm = newForm;
     })(controllerts = MEANSample.controllerts || (MEANSample.controllerts = {}));
 })(MEANSample || (MEANSample = {}));
-angular.module("app.controller", []).controller("controller", MEANSample.controllerts.newForm);
-angular.module("app", ["app.controller", 'ngResource']);
+angular.module("app.controller", ['ngResource']).controller("controller", MEANSample.controllerts.newForm);
+angular.module("app", ["app.controller"]);
 //# sourceMappingURL=newForm.js.map

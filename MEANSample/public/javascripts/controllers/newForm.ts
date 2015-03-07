@@ -8,9 +8,12 @@ module MEANSample.controllerts {
         submit: Function;
     }
 
+    interface PersonResourceClass extends ng.resource.IResourceClass<models.Person> {
+    }
+
     //コントローラ本体
     export class newForm {
-        constructor(public $scope: newFormData) {
+        constructor(public $scope: newFormData, public $resource: ng.resource.IResourceService) {
             $scope.person = new models.Person();
             // for debug
             $scope.person.name = "おなまえ";
@@ -23,11 +26,15 @@ module MEANSample.controllerts {
 
         //イベントハンドラ
         submit() {
-            // for debug
-            this.$scope.person.age++;
+            var self = this;
+            var personApi = this.$resource<PersonResourceClass>("/person");
+            personApi.save(this.$scope.person, function () {
+                // for debug
+                self.$scope.person.age++;
+            });
         }
     }
 }
 
-angular.module("app.controller", []).controller("controller", MEANSample.controllerts.newForm);
-angular.module("app", ["app.controller", 'ngResource']);
+angular.module("app.controller", ['ngResource']).controller("controller", MEANSample.controllerts.newForm);
+angular.module("app", ["app.controller"]);

@@ -1,5 +1,7 @@
 function save(req, res) {
-    console.log(req.params.person);
+    var person = req.body; //POSTのデータはbodyで受け渡されます。
+    console.log(person);
+    res.json(true);
 }
 exports.save = save;
 ;

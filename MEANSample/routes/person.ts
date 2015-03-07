@@ -4,5 +4,7 @@
 import express = require('express');
 
 export function save(req: express.Request, res: express.Response) {
-    console.log(req.params.person);
+    var person = <MEANSample.models.Person>req.body;   //POSTのデータはbodyで受け渡されます。
+    console.log(person);
+    res.json(true);
 };

@@ -34,9 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Scripts\tsd.json" />
+    <Content Include="views\list.jade" />
     <Content Include="views\newForm.jade" />
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="db\db.ts" />
+    <TypeScriptCompile Include="public\javascripts\controllers\list.ts" />
     <TypeScriptCompile Include="public\javascripts\models\Person.ts" />
     <TypeScriptCompile Include="public\javascripts\controllers\newForm.ts" />
     <TypeScriptCompile Include="routes\index.ts" />

@@ -16,3 +16,9 @@ export function save(req: express.Request, res: express.Response) {
     });
     res.json(true);
 };
+
+export function query(req: express.Request, res: express.Response) {
+    var result = db.PersonModel.find({}, function (err, docs) {
+        res.json(docs);
+    });
+}

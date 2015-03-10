@@ -8,4 +8,9 @@ function newForm(req, res) {
 }
 exports.newForm = newForm;
 ;
+function list(req, res) {
+    res.render('list', { title: 'List Item' });
+}
+exports.list = list;
+;
 //# sourceMappingURL=index.js.map

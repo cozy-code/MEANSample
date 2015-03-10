@@ -12,4 +12,10 @@ function save(req, res) {
 }
 exports.save = save;
 ;
+function query(req, res) {
+    var result = db.PersonModel.find({}, function (err, docs) {
+        res.json(docs);
+    });
+}
+exports.query = query;
 //# sourceMappingURL=person.js.map

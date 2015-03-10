@@ -8,7 +8,7 @@ export function save(req: express.Request, res: express.Response) {
     var person = <MEANSample.models.Person>req.body;   //POSTのデータはbodyで受け渡されます。
     console.log(person);
 
-    var personDAO = new db.PersonModel({ name: person.name, age: person.age, comment: person.comment });
+    var personDAO = new db.PersonModel(person);
     personDAO.save(function (err, dbres) {
         if (err) {
             console.log("Error");

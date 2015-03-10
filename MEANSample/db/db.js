@@ -6,5 +6,6 @@ var PersonSchema = new mongoose.Schema({
     age: Number,
     comment: String
 });
-exports.PersonModel = mongoose.model('person', PersonSchema);
+//モデル
+exports.PersonModel = mongoose.model('PersonModel', PersonSchema);
 //# sourceMappingURL=db.js.map

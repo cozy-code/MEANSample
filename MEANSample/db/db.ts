@@ -1,6 +1,5 @@
 ﻿
 import mongoose = require('mongoose');
-import models = MEANSample.models;
 
 var db = mongoose.connect('mongodb://localhost/mean_sample');
 
@@ -11,7 +10,5 @@ var PersonSchema: mongoose.Schema = new mongoose.Schema({   //なんか二度手
     comment: String
 });
 
-export var PersonModel = mongoose.model('person', PersonSchema);
-
-
-
+//モデル
+export var PersonModel = mongoose.model('PersonModel', PersonSchema);

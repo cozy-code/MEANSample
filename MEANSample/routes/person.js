@@ -18,4 +18,11 @@ function query(req, res) {
     });
 }
 exports.query = query;
+function get(req, res) {
+    var id = req.params.id;
+    var result = db.PersonModel.findById(id, function (err, docs) {
+        res.json(docs);
+    });
+}
+exports.get = get;
 //# sourceMappingURL=person.js.map

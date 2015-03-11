@@ -25,10 +25,12 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/newForm', routes.newForm);
 app.get('/list', routes.list); //一覧ページ
+app.get('/item/:id', routes.item); //詳細ページ
 app.get('/users', user.list);
 // Web API
 app.post("/person", person.save); //引数なしPOSTは新規作成
 app.get("/person", person.query); //webapi用 引数なしget:一覧
+app.get("/person/:id", person.get); //webapi用 引数ありget:一件
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });

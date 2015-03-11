@@ -34,10 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Scripts\tsd.json" />
+    <Content Include="views\item.jade" />
     <Content Include="views\list.jade" />
     <Content Include="views\newForm.jade" />
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="db\db.ts" />
+    <TypeScriptCompile Include="public\javascripts\controllers\item.ts" />
     <TypeScriptCompile Include="public\javascripts\controllers\list.ts" />
     <TypeScriptCompile Include="public\javascripts\models\Person.ts" />
     <TypeScriptCompile Include="public\javascripts\controllers\newForm.ts" />
@@ -45,6 +47,7 @@
     <TypeScriptCompile Include="routes\person.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />

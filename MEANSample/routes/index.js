@@ -13,4 +13,10 @@ function list(req, res) {
 }
 exports.list = list;
 ;
+function item(req, res) {
+    console.log("req.params.id=" + req.params.id);
+    res.render('item', { title: 'Item detail', itemid: req.params.id });
+}
+exports.item = item;
+;
 //# sourceMappingURL=index.js.map

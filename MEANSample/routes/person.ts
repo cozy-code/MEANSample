@@ -22,3 +22,10 @@ export function query(req: express.Request, res: express.Response) {
         res.json(docs);
     });
 }
+
+export function get(req: express.Request, res: express.Response) {
+    var id = req.params.id;
+    var result = db.PersonModel.findById(id, function (err, docs) {
+        res.json(docs);
+    });
+}
